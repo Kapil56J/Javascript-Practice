@@ -10,9 +10,9 @@ function greet(name, message) {
 };
 
 function Greetings() {
-    console.log('Namaste!');
+    console.log('Kapil');
 }
-greet('Kapil',Greetings);
+greet('Namste!',Greetings);
 
 // greet() is a higher-order function because it takes another function (callback) as an argument.
 

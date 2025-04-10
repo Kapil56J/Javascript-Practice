@@ -1,5 +1,5 @@
 // Closure : A closure is a function that has access to the parent scope, even after the outer function has finished execution.
-// In the above example, the inner function has access to the name variable of the outer function even after the outer function has returned. Therefore, the inner function forms a closure.
+// In the below example, the inner function has access to the name variable of the outer function even after the outer function has returned. Therefore, the inner function forms a closure.
 
 function outer() {
     const name = 'Roadmap';
