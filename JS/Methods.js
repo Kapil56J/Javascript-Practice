@@ -76,7 +76,7 @@ for (let key in obj) {
 }
 console.log('clearObj',clearObj)
 
-// Practice JS and React array methods list
+// Javascript array methods list
 const arrayMethods = [
   'concat',
   'copyWithin',
