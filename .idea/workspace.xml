@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e77eece4-1b03-4920-8097-903b20bdb569" name="Changes" comment=" Addyeing code" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="kapil &lt;kapiljadhav5656@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Kapil56J&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Kapil56J/Javascript-Practice.git&quot;,
+    &quot;accountId&quot;: &quot;8f67be5c-d9ee-4bf8-a3f9-cff50391116a&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2uBHT2JPpvsyCLMJcpg7BNBIz2O" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Node.js.JSConcepts.js.executor": "Run",
+    "Node.js.Methods.js.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "JSandReact",
+    "last_opened_file_path": "/Users/kapil/WebstormProjects/Javascript/React",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/React" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/React" />
+      <recent name="$PROJECT_DIR$/JS" />
+      <recent name="$PROJECT_DIR$/../Practice JS and React/JavaScript" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.25659.40" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e77eece4-1b03-4920-8097-903b20bdb569" name="Changes" comment="" />
+      <created>1741715051752</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1741715051752</updated>
+      <workItem from="1741715053176" duration="806000" />
+      <workItem from="1741801520463" duration="235000" />
+      <workItem from="1741845847942" duration="524000" />
+      <workItem from="1741858995275" duration="1762000" />
+      <workItem from="1741870313634" duration="3071000" />
+      <workItem from="1744268393197" duration="209000" />
+      <workItem from="1744270772936" duration="4000" />
+      <workItem from="1744270799917" duration="114000" />
+      <workItem from="1744271129421" duration="35000" />
+      <workItem from="1744271168375" duration="6000" />
+      <workItem from="1744271185131" duration="2000" />
+      <workItem from="1744271382983" duration="941000" />
+      <workItem from="1744272931924" duration="850000" />
+      <workItem from="1744273815425" duration="578000" />
+    </task>
+    <task id="LOCAL-00001" summary="first commit on new repo">
+      <option name="closed" value="true" />
+      <created>1741715274731</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1741715274731</updated>
+    </task>
+    <task id="LOCAL-00002" summary="first commit on new repo">
+      <option name="closed" value="true" />
+      <created>1741715333762</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1741715333762</updated>
+    </task>
+    <task id="LOCAL-00003" summary="first commit on new repo">
+      <option name="closed" value="true" />
+      <created>1741801614899</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1741801614899</updated>
+    </task>
+    <task id="LOCAL-00004" summary="first commit on new repo">
+      <option name="closed" value="true" />
+      <created>1741801694710</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1741801694710</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Employee validaion form">
+      <option name="closed" value="true" />
+      <created>1741846013049</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1741846013049</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Employee validaion form">
+      <option name="closed" value="true" />
+      <created>1741846150009</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1741846150009</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Call, bind, apply">
+      <option name="closed" value="true" />
+      <created>1744268581937</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1744268581937</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Call, bind, apply">
+      <option name="closed" value="true" />
+      <created>1744268593816</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1744268593816</updated>
+    </task>
+    <task id="LOCAL-00009" summary="JS and React Practive">
+      <option name="closed" value="true" />
+      <created>1744272095234</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1744272095234</updated>
+    </task>
+    <task id="LOCAL-00010" summary=" React Practice">
+      <option name="closed" value="true" />
+      <created>1744272198257</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1744272198257</updated>
+    </task>
+    <task id="LOCAL-00011" summary=" Adding code">
+      <option name="closed" value="true" />
+      <created>1744273359223</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1744273359224</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="methods file" />
+    <MESSAGE value="first commit on new repo" />
+    <MESSAGE value="Employee validaion form" />
+    <MESSAGE value="Call, bind, apply" />
+    <MESSAGE value="JS and React Practive" />
+    <MESSAGE value=" React Practice" />
+    <MESSAGE value=" Adding code" />
+    <option name="LAST_COMMIT_MESSAGE" value=" Adding code" />
+  </component>
+</project>
