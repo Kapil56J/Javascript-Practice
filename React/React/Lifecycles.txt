@@ -1,0 +1,49 @@
+React Lifecycle Methods:
+React lifecycle methods are special functions that get called automatically at different phases of a component’s existence.
+3 Phases of a React Component Lifecycle
+Mounting (Component is created and added to the DOM) Happens only once when a component is added to the DOM.
+Updating (Component is re-rendered due to state/props changes) Happens whenever state or props change, causing a re-render.
+Unmounting (Component is removed from the DOM) Happens once when a component is removed from the DOM.
+
+using useEffect
+componentDidMount	    useEffect(() => {...}, [])
+componentDidUpdate	    useEffect(() => {...}, [dependency])
+componentWillUnmount	useEffect(() => { return () => {...}; }, [])
+
+//import { useState, useEffect } from "react";
+
+const Timer = () => {
+  const [seconds, setSeconds] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setSeconds((prev) => prev + 1);
+    }, 1000);
+
+    return () => {
+      clearInterval(timer); Cleanup like componentWillUnmount
+      console.log("Component Unmounted & Timer Cleared");
+    };
+  }, []);
+
+  return <h2>Seconds: {seconds}</h2>;
+};
+
+import { useState } from "react";
+
+function Child() {
+  return <h2>Hii buddy</h2>;
+}
+
+const App = () => {
+  const [show, setShow] = useState(false);
+
+  return (
+    <div>
+      <button onClick={() => setShow(!show)}>Toggle Child</button>
+      {show && <Child />}
+    </div>
+  );
+};
+
+export default App;

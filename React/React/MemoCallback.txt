@@ -1,0 +1,94 @@
+useCallback returns a memoized function, ensuring its reference remains stable across renders.
+useMemo returns a memoized value, optimizing expensive calculations by caching the result.
+Use useCallback for passing stable function references, and useMemo for optimizing computations.
+
+useMemo: useMemo returns a memoized value, optimizing expensive calculations by caching the result.
+useMemo is a hook that memoizes (caches) the result of a function call, preventing unnecessary re-renders by only recalculating the value when its dependencies change.
+where we can use (e.g., filtering, sorting, large lists).
+Example:
+import React, { useState, useMemo } from "react";
+
+const App = () => {
+  const [count, setCount] = useState(0);
+  const [num, setNum] = useState(10);
+
+  // Expensive calculation (runs only when num changes)
+  const expensiveCalculation = useMemo(() => {
+    console.log("🧮 Running expensive calculation...");
+    return num * 10;
+  }, [num]); // Only re-computes when `num` changes
+
+  return (
+    <div>
+      <h2>Count: {count}</h2>
+      <button onClick={() => setCount(count + 1)}>Increment Count</button>
+
+      <h2>Expensive Value: {expensiveCalculation}</h2>
+      <button onClick={() => setNum(num + 1)}>Change Num</button>
+    </div>
+  );
+};
+
+export default App;
+
+here useMemo only recalculates when num changes.
+
+useCallback: useCallback returns a memoized function, ensuring its reference remains stable across renders.
+when to use : Passing functions as props to child components to prevent unnecessary re-renders.
+
+Example:
+import { useState } from "react";
+import Todos from "./Todos";
+
+const App = () => {
+  const [count, setCount] = useState(0);
+  const [todos, setTodos] = useState([]);
+
+  const increment = () => {
+    setCount((c) => c + 1);
+  };
+  const addTodo = () => {
+    setTodos((t) => [...t, "New Todo"]); // ✅ Using functional update.
+  };
+
+  // 🛠 Wrap addTodo with useCallback to prevent unnecessary recreation
+  const addTodo = useCallback(() => {
+    setTodos((t) => [...t, "New Todo"]);
+  }, []);
+
+  return (
+    <>
+      <Todos todos={todos} addTodo={addTodo} />
+      <hr />
+      <div>
+        Count: {count}
+        <button onClick={increment}>+</button>
+      </div>
+    </>
+  );
+};
+
+import { memo } from "react";
+
+const Todos = ({ todos, addTodo }) => {
+  console.log("child render");
+  return (
+    <>
+      <h2>My Todos</h2>
+      {todos.map((todo, index) => {
+        return <p key={index}>{todo}</p>;
+      })}
+      <button onClick={addTodo}>Add Todo</button>
+    </>
+  );
+};
+
+export default memo(Todos);
+
+
+1️⃣ Parent (App) Rerenders on State Change
+Whenever count is updated (setCount is called), the entire App component re-renders.
+Since Todos is a child of App, it also re-renders.
+2️⃣ addTodo Function is Recreated Every Render
+In JavaScript, functions are objects, and each time App rerenders, the addTodo function is newly created.
+Even if todos don’t change, Todos sees a new function reference and rerenders.

@@ -1,0 +1,79 @@
+Redux:
+Redux is a state management library that helps manage global state in large applications.
+there are 3 main parts of redux:
+STORE: The Redux Store holds the entire application state in one place.
+All components can access or update this state directly.
+
+ACTION: Describes what needs to change in the state.
+Example: "INCREMENT_COUNTER" or "ADD_TODO".
+
+REDUCER: A pure function that takes the current state and an action, then returns the new state.
+
+index.js==>
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import store from "./store";  // Import Redux store
+import App from "./App";
+
+ReactDOM.render(
+  <Provider store={store}>  
+    <App />
+  </Provider>,
+  document.getElementById("root")
+);
+
+App.js==>
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+
+const App = () => {
+  // 🔹 useSelector: Get data from Redux store
+  const count = useSelector((state) => state.count);
+
+  // 🔹 useDispatch: Dispatch actions to update store
+  const dispatch = useDispatch();
+
+  return (
+    <div>
+      <h2>Counter: {count}</h2>
+      <button onClick={() => dispatch({ type: "INCREMENT" })}>+</button>
+      <button onClick={() => dispatch({ type: "DECREMENT" })}>-</button>
+    </div>
+  );
+};
+
+export default App;
+
+
+Store.js==>
+import { createStore } from "redux";
+
+// Initial State
+const initialState = {
+  count: 0
+};
+
+// Reducer Function (Takes current state & action, returns new state)
+const counterReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case "INCREMENT":
+      return { count: state.count + 1 };
+    case "DECREMENT":
+      return { count: state.count - 1 };
+    default:
+      return state;
+  }
+};
+
+// Create Redux Store
+const store = createStore(counterReducer);
+
+export default store;
+
+
+ Redux Flow (Easy Explanation)
+1️⃣ Component → dispatch(action)
+2️⃣ Action → Sent to Reducer
+3️⃣ Reducer → Updates Store (Global State)
+4️⃣ Component → Uses useSelector to get updated state

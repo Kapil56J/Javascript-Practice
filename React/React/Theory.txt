@@ -1,0 +1,71 @@
+React Practice
+
+what is difference in functional and class component with example
+ans: functional component is a javascript function that returns jsx.
+functional component
+function Welcome(props) {
+    return <h1>Hello, {props.name}</h1>;
+}
+class component
+ans: class component is a javascript class that extends react component and have render method that returns jsx.
+class Welcome extends React.Component {
+    render() {
+        return <h1>Hello, {this.props.name}</h1>;
+    }
+}
+//========================================================
+what is controlled and uncontrolled component
+ans: controlled component is a component that is controlled by react states like useState or this.state.
+example of controlled component
+import { useState } from "react";
+
+const ControlledInput = () => {
+  const [text, setText] = useState("");
+
+  return (
+    <div>
+      <input 
+        type="text" 
+        value={text} 
+        onChange={(e) => setText(e.target.value)} 
+      />
+      <p>Input Value: {text}</p>
+    </div>
+  );
+};
+
+export default ControlledInput;
+//=========> example of uncontrolled component:  and uncontrolled component is a component that is controlled by dom like useRef.
+import { useState } from "react";
+
+const UncontrolledInput = () => {
+   const inputRef = useRef(null);
+
+const handleSubmit = () => {
+    alert(`Input Value: ${inputRef.current.value}`);
+  };
+
+  return (
+    <div>
+      <input 
+        type="text" 
+       ref={inputRef}
+      />
+    <button onClick={handleSubmit}>Submit</button>
+    </div>
+  );
+};
+//========================================================
+what is state and props
+ans: props are immutable and state is mutable. props are passed from parent component to child component and state is managed within the component
+//========================================================
+what is react hooks
+ans: react hooks are functions that let you use state and other react features in functional components.
+//========================================================
+Redux
+Debouncing and Throttling
+lazy and suspense
+error boundary
+
+
+

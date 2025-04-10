@@ -12,27 +12,27 @@ const people = [
     { name: 'Alice', age: 25 },
     { name: 'Bob', age: 30 },
     { name: 'Charlie', age: 35 }
-];
+  ];
 
-const keyStore = people.map(key => {
+  const keyStore = people.map(key => {
     return `${key.name}`});
 
-console.log('Map key store: ', keyStore);
+ console.log('Map key store: ', keyStore);
 
-// forEach function : The forEach method in JavaScript is an array method that simply calls a provided function on each element in the array..
+ // forEach function : forEach() is a method that executes a provided function once for each array element.use when don't need a returned value.
 
 const forEach = ['JavaScript', 'React', 'Node.js'];
 
-forEach.forEach(val => console.log('For each Function: ', `${val}`))
+forEach.forEach(val => console.log('For each Function=>: ', `${val}`))
 
 // Filter function: The filter() method creates a new array with all elements that pass the test implemented by the provided function.
 
 const number = [1, 2, 3, 4, 5, 6];
 
 const evenNumbers = number.filter((number) => {
-    return number % 2 === 0;
+  return number % 2 === 0;
 });
-console.log('Filter: ', evenNumbers);
+console.log('Filter=>: ', evenNumbers);
 
 // Reduce Method = The reduce() method to reduce an array to a single value.
 
@@ -50,9 +50,9 @@ const array1 = [1, 2, 2, 3, 4, 5, 6, 6 , 7, 8, 9, 10];
 const uniqueValue = [];
 
 array1.forEach(value => {
-    if (!uniqueValue.includes(value)) {
-        uniqueValue.push(value)
-    }
+  if (!uniqueValue.includes(value)) {
+    uniqueValue.push(value)
+  }
 });
 console.log('uniqueValue',uniqueValue)
 
@@ -64,57 +64,57 @@ console.log('uniqueValue',uniqueValue)
 // Remove * from key
 
 const obj = {
-    '*first' : 1,
-    'second' : 2,
-    'third*' : 3
+  '*first' : 1,
+  'second' : 2,
+  'third*' : 3
 };
 
 const clearObj = {};
 for (let key in obj) {
-    let newKey = key.replace('*','');
-    clearObj[newKey] = obj[key]
+  let newKey = key.replace('*','');
+  clearObj[newKey] = obj[key]
 }
 console.log('clearObj',clearObj)
 
-// Javascript array methods list
+// Practice JS and React array methods list
 const arrayMethods = [
-    'concat',
-    'copyWithin',
-    'entries',
-    'every',
-    'fill',
-    'filter',
-    'find',
-    'findIndex',
-    'forEach',
-    'includes',
-    'indexOf',
-    'join',
-    'keys',
-    'lastIndexOf',
-    'map',
-    'pop',
-    'push',
-    'reduce',
-    'reduceRight',
-    'reverse',
-    'shift',
-    'slice',
-    'some',
-    'sort',
-    'splice',
-    'toString',
-    'unshift',
-    'values'
+  'concat',
+  'copyWithin',
+  'entries',
+  'every',
+  'fill',
+  'filter',
+  'find',
+  'findIndex',
+  'forEach',
+  'includes',
+  'indexOf',
+  'join',
+  'keys',
+  'lastIndexOf',
+  'map',
+  'pop',
+  'push',
+  'reduce',
+  'reduceRight',
+  'reverse',
+  'shift',
+  'slice',
+  'some',
+  'sort',
+  'splice',
+  'toString',
+  'unshift',
+  'values'
 ];
 
-// const arra = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-// const arra2 = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+const arra = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const arra2 = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
 const object = {
-    name: 'kapil',
-    age: 25,
-    city: 'Delhi'
+  name: 'kapil',
+  age: 25,
+  city: 'Delhi'
 };
 
 console.log('concat', arra.concat(arra2));
@@ -125,3 +125,17 @@ console.log('fill', arra.fill(0, 2, 5)); // explain: fills all the elements of a
 console.log('filter', arra.filter(value => value > 5)); // explain: creates a new array with all elements that pass the test implemented by the provided function.
 console.log('find', arra.find(value => value > 5)); // explain: returns the value of the first element in the provided array that satisfies the provided testing function.
 console.log('findIndex', arra.findIndex(value => value > 5)); // explain: returns the index of the first element in the array that satisfies the provided testing function.
+// Reduce: The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
+console.log('reduce', arra.reduce((acc, curr) => acc + curr, 0)); // explain: The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
+
+const numbers = [10, 20, 30, 40];
+
+
+
+// console.log(add); // Output: 100
+
+
+// max value fromm array
+const max = Math.max(...numbers);
+// with reduce method
+const maxValue = numbers.reduce((acc, num) => (num > acc ? num : acc),0)
