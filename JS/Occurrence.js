@@ -1,4 +1,4 @@
-// FInd Unique values in an array
+// Find Unique values in an array
 
 const array1 = [1, 2, 2, 3, 4, 5, 6, 6 , 7, 8, 9, 10];
 
@@ -30,7 +30,22 @@ array2.forEach(value => {
 // explaination: forEacch takes a callback function and iterates over each element of the array. It checks if the value already exists in the occurrence object. If it does, it increments the count by 1. If it doesn't, it initializes the count to 1.
 console.log('occurrence', occurrence);
 // Output: { '1': 1, '2': 2, '3': 1, '4': 1, '5': 1, '6': 2, '7': 1, '8': 1, '9': 1, '10': 1 }
-    
+
+// Remove * from key
+
+const obj = {
+  '*first' : 1,
+  'second' : 2,
+  'third*' : 3
+};
+
+const clearObj = {};
+for (let key in obj) {
+  let newKey = key.replace('*','');
+  clearObj[newKey] = obj[key]
+}
+console.log('clearObj',clearObj)
+
 
 
 
