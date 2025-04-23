@@ -62,10 +62,7 @@ ans: props are immutable and state is mutable. props are passed from parent comp
 what is react hooks
 ans: react hooks are functions that let you use state and other react features in functional components.
 //========================================================
-Redux
-Debouncing and Throttling
-lazy and suspense
-error boundary
+
 
 
 
