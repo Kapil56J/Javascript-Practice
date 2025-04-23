@@ -1,7 +1,7 @@
 React Practice
 
-what is difference in functional and class component with example
-ans: functional component is a javascript function that returns jsx.
+** what is difference in functional and class component with example
+Ans: functional component is a javascript function that returns jsx.
 functional component
 function Welcome(props) {
     return <h1>Hello, {props.name}</h1>;
@@ -13,9 +13,11 @@ class Welcome extends React.Component {
         return <h1>Hello, {this.props.name}</h1>;
     }
 }
-//========================================================
-what is controlled and uncontrolled component
-ans: controlled component is a component that is controlled by react states like useState or this.state.
+
+========================================================
+
+** what is controlled and uncontrolled component
+Ans: controlled component is a component that is controlled by react states like useState or this.state.
 example of controlled component
 import { useState } from "react";
 
@@ -55,17 +57,107 @@ const handleSubmit = () => {
     </div>
   );
 };
-//========================================================
-what is state and props
-ans: props are immutable and state is mutable. props are passed from parent component to child component and state is managed within the component
-//========================================================
-what is react hooks
-ans: react hooks are functions that let you use state and other react features in functional components.
-//========================================================
-Redux
-Debouncing and Throttling
-lazy and suspense
-error boundary
 
+========================================================
 
+** what is state and props
+Ans: props are immutable and state is mutable. props are passed from parent component to child component and state is managed within the component
 
+========================================================
+
+** what is react hooks
+Ans: react hooks are functions that let you use state and other react features in functional components.
+
+========================================================
+
+** Dual binding and data flow
+
+Ans: In React, dual binding (often referred to as two-way data binding) means that data can flow both ways — 
+from the component state to the UI (view) and from the UI back to the component state.
+
+React primarily uses one-way data binding, where data flows from parent to child components or from the state to the view. 
+But in scenarios like form inputs, two-way data binding can be simulated.
+
+const NameInput =  () => {
+
+  const [name, setName] = useState('');
+
+  const handleChange = (e) => {
+    setName(e.target.value);
+  };
+
+  return(
+    <>
+    <input type="text" onChange={handleChange} value={name} />
+    <h2>Hellow, {name}!</h2>
+    </>
+  );
+}
+
+🔄 Data Flow Explanation:
+Initial Render:
+name is an empty string.
+Input field renders with value "".
+
+User Types "Kapil":
+onChange fires → handleChange updates the state (setName("Kapil"))
+React re-renders the component → input now shows Kapil, and so does the <h2> tag.
+
+flow=>
+User Input → onChange → setState → Component Renders → Input Gets New Value → ...
+
+React by default follows one-way binding:
+Props go from parent → child
+State drives the view (but not the other way around unless you set it up)
+Two-way binding in React is not automatic like Angular — you control it manually via state and event handlers.
+
+========================================================
+
+** Two-way data flow between child and parent
+Ans: In React, two-way data flow between child and parent is not built-in like it is in some frameworks (e.g., Angular). 
+But yes — you can achieve it manually using a pattern called "lifting state up" or callback props.
+
+// Parent Component
+import { useState } from "react";
+import Child from "./Child";
+
+function Parent() {
+  const [childData, setChildData] = useState("");
+
+  const handleChildData = (data) => {
+    setChildData(data); // Receive data from child
+  };
+
+  return (
+    <div>
+      <h2>Parent Component</h2>
+      <p>Data from child: {childData}</p>
+      <Child sendDataToParent={handleChildData} />
+    </div>
+  );
+}
+
+export default Parent;
+
+//=========>
+
+// Child Component
+function Child({ sendDataToParent }) {
+  const handleClick = () => {
+    sendDataToParent("Hello from child!"); // Send data to parent
+  };
+
+  return (
+    <div>
+      <h3>Child Component</h3>
+      <button onClick={handleClick}>Send Data to Parent</button>
+    </div>
+  );
+}
+
+export default Child;
+
+🔄 Summary of Data Flow:
+Parent → Child: via props (sendDataToParent)
+Child → Parent: by calling the function passed as prop
+That’s controlled two-way communication — you just architect it explicitly.

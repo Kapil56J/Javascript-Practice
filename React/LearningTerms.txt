@@ -1,2 +1,6 @@
 CICD Pipelines
 github actions => secrets to add in github => push the code 
+Debouncing and Throttling
+lazy and suspense
+error boundary
+dual binding and data flow
