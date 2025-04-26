@@ -32,6 +32,11 @@ function countRepeatedWords(sentence, bannedWord) {
         repeatedWords[word] = wordCount[word];
       }
     }
+  // or
+  for (const word of words) {
+    if (wordCount[word] > 1) {
+     repeatedWords[word] = wordCount[word];
+   }
   
     console.log(`Repeated words (excluding banned word "${bannedWord}"):`);
     for (const word in repeatedWords) {
@@ -58,6 +63,10 @@ array2.forEach(value => {
   else {
     occurrence[value] = 1;
   }
+
+  // or
+  occurrence[value] = (occurrence[value] || 0) + 1;
+
 });
 // explaination: forEacch takes a callback function and iterates over each element of the array. It checks if the value already exists in the occurrence object. If it does, it increments the count by 1. If it doesn't, it initializes the count to 1.
 console.log('occurrence', occurrence);
