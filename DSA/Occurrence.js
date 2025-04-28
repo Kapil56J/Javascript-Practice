@@ -32,17 +32,18 @@ function countRepeatedWords(sentence, bannedWord) {
         repeatedWords[word] = wordCount[word];
       }
     }
-  // or
-  for (const word of words) {
-    if (wordCount[word] > 1) {
-     repeatedWords[word] = wordCount[word];
-   }
-  
+
     console.log(`Repeated words (excluding banned word "${bannedWord}"):`);
     for (const word in repeatedWords) {
       console.log(`${word}: ${wordCount[word]}`);
     }
   }
+  // or
+   for (const word in wordCount){
+      if (countWord[word] > 1) {
+          console.log(`${word}: ${wordCount[word]}`)
+      }
+   }
   
   // Test Case 1
   let sentence = "This is a test sentence and this test is only a test";
