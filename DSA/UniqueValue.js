@@ -1,20 +1,22 @@
-// Find Unique values in an array
+// Find near value of x in an array
+const arr = [1,2,3,4,5,6,12,15,20];
+const x = 17;
 
-const array1 = [1, 2, 2, 3, 4, 5, 6, 6 , 7, 8, 9, 10];
+function closetvalue(arr, x) {
+    let closest = arr[0];
+    let minDiff = Math.abs(x - closest);
+    
+    for (const i of arr) {
+        let diff = Math.abs(i - x);
+        if (diff < minDiff) {
+            closest = i;
+            minDiff = diff
+        }
+    }
+    return closest;
+};
 
-const uniqueValue = [];
-
-array1.forEach(value => {
-  if (!uniqueValue.includes(value)) {
-    uniqueValue.push(value)
-  }
-});
-console.log('uniqueValue',uniqueValue)
-
-// const uniqueArray = array1.filter((value, index, self) => {
-//   return self.indexOf(value) === index;
-// });
-// console.log('uniqueArray', uniqueArray);
+console.log(closetvalue(arr, x))
 
 
 
