@@ -1,0 +1,83 @@
+import React, { useState } from 'react';
+
+function TodoApp() {
+  const [todos, setTodos] = useState([]);
+  const [input, setInput] = useState('');
+  const [editId, setEditId] = useState(null);
+
+  // Add or update todo
+  const handleSubmit = () => {
+    if (input.trim() === '') return;
+
+    if (editId === null) {
+      // Add new todo
+      setTodos([...todos, { id: Date.now(), text: input }]);
+    } else {
+      // Update existing todo
+      setTodos(
+        todos.map(todo => (todo.id === editId ? { ...todo, text: input } : todo))
+      );
+      setEditId(null);
+    }
+    setInput('');
+  };
+
+  // Delete todo
+  const deleteTodo = (id) => {
+    setTodos(todos.filter(todo => todo.id !== id));
+    if (editId === id) {
+      // Cancel edit if deleting the one being edited
+      setEditId(null);
+      setInput('');
+    }
+  };
+
+  // Start editing - put text in input box
+  const startEdit = (id, text) => {
+    setEditId(id);
+    setInput(text);
+  };
+
+  // Cancel editing
+  const cancelEdit = () => {
+    setEditId(null);
+    setInput('');
+  };
+
+  return (
+    <div style={{ maxWidth: 400, margin: 'auto', padding: 20 }}>
+      <h2>To-Do List (Edit in Input Box)</h2>
+
+      <input
+        type="text"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        placeholder="Add or edit task"
+      />
+      <button onClick={handleSubmit} style={{ marginLeft: 10 }}>
+        {editId === null ? 'Add' : 'Update'}
+      </button>
+      {editId !== null && (
+        <button onClick={cancelEdit} style={{ marginLeft: 10 }}>
+          Cancel
+        </button>
+      )}
+
+      <ul style={{ paddingLeft: 0, marginTop: 20 }}>
+        {todos.map(({ id, text }) => (
+          <li key={id} style={{ marginBottom: 10, listStyle: 'none' }}>
+            <span>{text}</span>
+            <button onClick={() => startEdit(id, text)} style={{ marginLeft: 10 }}>
+              Edit
+            </button>
+            <button onClick={() => deleteTodo(id)} style={{ marginLeft: 5 }}>
+              Delete
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default TodoApp;
