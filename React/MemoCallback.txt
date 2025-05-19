@@ -1,5 +1,8 @@
-useCallback returns a memoized function, ensuring its reference remains stable across renders.
+useMemo: Memoizes the result of a function or expression, preventing unnecessary recalculations. 
+useCallback: Memoizes a function, ensuring that it's only recreated when its dependencies change. 
+
 useMemo returns a memoized value, optimizing expensive calculations by caching the result.
+
 Use useCallback for passing stable function references, and useMemo for optimizing computations.
 
 useMemo: useMemo returns a memoized value, optimizing expensive calculations by caching the result.
