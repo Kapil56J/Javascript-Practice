@@ -1,5 +1,51 @@
 The Context API in React is a tool that enables data sharing between components without the need to explicitly pass props through every level of the component tree, also known as "prop drilling." It is particularly useful for managing global states, such as user authentication, theme settings, or language preferences, that need to be accessible by many components within an application
 
+
+// Theme example
+
+// Creating a context
+import React, { createContext, useState, useContext } from 'react';
+const ThemeContext = createContext({ theme: 'light', toggleTheme: () => {} });
+
+// Theme provider component
+const ThemeProvider = ({ children }) => {
+  const [theme, setTheme] = useState('light');
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
+
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
+
+// consuming component
+const ThemedComponent = () => {
+    const { theme, toggleTheme } = useContext(ThemeContext);
+
+    return (
+        <div style={{ backgroundColor: theme === 'light' ? '#fff' : '#000', color: theme === 'light' ? '#000' : '#fff' }}>
+            <p>Current theme: {theme}</p>
+            <button onClick={toggleTheme}>Toggle Theme</button>
+        </div>
+    );
+};
+
+// Usage
+const App = () => {
+    return (
+        <ThemeProvider>
+            <ThemedComponent />
+        </ThemeProvider>
+    );
+};
+
+export default App;
+
+==================================================================================
+
 import { useState, createContext, useContext } from "react";
 import ReactDOM from "react-dom/client";
 
