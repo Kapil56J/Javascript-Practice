@@ -21,6 +21,8 @@ const ThemeProvider = ({ children }) => {
   );
 };
 
+// This component wraps children with a ThemeContext.Provider.
+
 // consuming component
 const ThemedComponent = () => {
     const { theme, toggleTheme } = useContext(ThemeContext);
@@ -44,6 +46,7 @@ const App = () => {
 
 export default App;
 
+// The App component wraps the ThemedComponent with the ThemeProvider, so it can access the theme context.
 ==================================================================================
 
 import { useState, createContext, useContext } from "react";
