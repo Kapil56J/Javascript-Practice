@@ -14,6 +14,10 @@ greet('Kapil', 'Ram', 'Sita', 'Laxman');
 // Spread Operator:
 // Used to spread (expand) elements from an array/object into individual elements also create the new array by combining existing array or adding new elements
 // also cloning/update the oject.
+// Expands
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5]; // [1, 2, 3, 4, 5]
+
 const fruits = ['apple', 'banana'];
 const moreFruits = ['mango', ...fruits, 'orange'];
 
